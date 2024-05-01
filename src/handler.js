@@ -2,7 +2,16 @@ const { nanoid } = require('nanoid');
 const books = require('./booksDb');
 
 const createBookHandler = (request, h) => {
-  const { name, year, author, summary, publisher, pageCount, readPage, reading } = request.payload;
+  const {
+    name,
+    year,
+    author,
+    summary,
+    publisher,
+    pageCount,
+    readPage,
+    reading,
+  } = request.payload;
   const id = nanoid();
   const finished = pageCount === readPage;
 
@@ -121,7 +130,16 @@ const getBookByIdHandler = (request, h) => {
 
 const updateBookByIdHandler = (request, h) => {
   const { bookId } = request.params;
-  const { name, year, author, summary, publisher, pageCount, readPage, reading } = request.payload;
+  const {
+    name,
+    year,
+    author,
+    summary,
+    publisher,
+    pageCount,
+    readPage,
+    reading,
+  } = request.payload;
   const updatedAt = new Date().toISOString();
   const index = books.findIndex((book) => book.id === bookId);
 

@@ -9,7 +9,6 @@
     "ecmaVersion": 12
   },
   "rules": {
-    "no-console": "off",
-    "devDependencies": false
+    "no-console": "off"
   }
 }

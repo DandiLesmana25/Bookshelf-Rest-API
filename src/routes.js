@@ -8,6 +8,13 @@ const {
 
 const routes = [
   {
+    method: 'GET',
+    path: '/',
+    handler: () => {
+      return 'hello Bookhelp api';
+    },
+  },
+  {
     method: 'POST',
     path: '/books',
     handler: createBookHandler,
